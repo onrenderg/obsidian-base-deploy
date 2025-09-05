@@ -1,7 +1,7 @@
 https://obsidian-base-deploy.vercel.app/
 
 
-
+[[sep-5-mauiport]]
 [[maui-app]]
 [[xam-port-maui]]
 remove all stacklayout with grid
