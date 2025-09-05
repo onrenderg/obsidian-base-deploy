@@ -1,32 +1,31 @@
+Here's that content in markdown format:
 
+---
 
+`@Dashboard.xaml` - Resources for Xamarin (XAM)
 
-@Dashboard.xaml@res-xam
+*   **Root Container**
+    *   Navigation Header with logo and title
+    *   Toolbar with home button and *theme-aware icon*
+*   **Main Layout Structure**
+    *   Grid root layout container
+        *   StackLayout `MainContent` wrapped with spacing and padding
 
-* root container 
-	* navigation header  with logo and title 
-	* toolbar with home button and *theme aware icon*
-* main layout structure
-	* grid root layout container 
-		* stacklayout MainContent wrapped with spacing and padding 
+---
 
+Document current layout structure with purposes: `Dashboard.xaml`
 
-
-Document current layout structure with purposes : Dashboard.xaml
-
-[[md_34343]]
+---
 
 Create documentation showing what needs to be changed for obsolete warnings
 
-[[md_3322]]
-[[aimd_dfdf]]
+---
 
+## Warning
 
-## Warning 
+`View.HorizontalOptions`
 
-View.HorizontalOptions
-
-FillAndExpand is obselete : The Stacklayout optsions are depricated use Grid instead 
+`FillAndExpand` is obsolete: The `StackLayout` options are deprecated, use `Grid` instead.
 
 ## Solution
 
@@ -34,11 +33,13 @@ FillAndExpand is obselete : The Stacklayout optsions are depricated use Grid ins
 
 ### **Modern Approach (Option 2)**
 
-- Replace entire `StackLayout` structure with `Grid`
-- Use `ColumnDefinitions` for layout control
-- Eliminates nested `StackLayout` complexity
+-   Replace entire `StackLayout` structure with `Grid`
+-   Use `ColumnDefinitions` for layout control
+-   Eliminates nested `StackLayout` complexity
 
+---
 
+**Original XML (with `StackLayout` in `NavigationPage.TitleView`):**
 
 ```xml
 <NavigationPage.TitleView>
@@ -51,7 +52,7 @@ FillAndExpand is obselete : The Stacklayout optsions are depricated use Grid ins
 </NavigationPage.TitleView>
 ```
 
-To 
+**Revised XML (using `Grid` in `NavigationPage.TitleView`):**
 
 ```xml
 <NavigationPage.TitleView>
@@ -68,10 +69,11 @@ To
 </NavigationPage.TitleView>
 ```
 
+---
 
-**Option 1** is cleaner - define ToolbarItems at the NavigationPage level where they logically belong, rather than mixing them with ContentPage content.
+**Option 1** is cleaner - define `ToolbarItems` at the `NavigationPage` level where they logically belong, rather than mixing them with `ContentPage` content.
 
-```cs
+```csharp
 public partial class App : Application
 {
     public App()
@@ -93,6 +95,9 @@ public partial class App : Application
 }
 ```
 
+---
+
+**Original XML (with `ImageButton` in `NavigationPage.TitleView` `StackLayout`):**
 
 ```xml
 <NavigationPage.TitleView>
@@ -110,6 +115,8 @@ public partial class App : Application
     </StackLayout>
 </NavigationPage.TitleView>
 ```
+
+**Revised XML (using `Grid` for `NavigationPage.TitleView` with `ImageButton`):**
 
 ```xml
 <NavigationPage.TitleView>
@@ -130,4 +137,3 @@ public partial class App : Application
     </Grid>
 </NavigationPage.TitleView>
 ```
-
