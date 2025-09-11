@@ -1,3 +1,36 @@
+
+
+
+[[base-mmap]]
+
+
+## xam-maui-apps
+
+* [[CERS]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 https://obsidian-base-deploy.vercel.app/
 
 
@@ -131,6 +164,9 @@ var dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Lo
 
 * shift+ ecs
 * ctrl+ alt o
+
+
+# Diagnostics
 
 ```cs
 
