@@ -1,38 +1,13 @@
 
-
-
-[[base-mmap]]
-
-
-## xam-maui-apps
-
-* [[CERS]]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[[Haks]]
 
 
 
 https://obsidian-base-deploy.vercel.app/
 
+
+
+[[CERS-basetwo-git-]]
 
 [[sep-5-mauiport]]
 [[maui-app]]
@@ -164,9 +139,6 @@ var dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Lo
 
 * shift+ ecs
 * ctrl+ alt o
-
-
-# Diagnostics
 
 ```cs
 
