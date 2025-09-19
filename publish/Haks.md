@@ -1,6 +1,80 @@
 
 
 
+
+
+
+
+
+# Class diagram
+
+
+```mermaid 
+
+classDiagram
+	class User {
+		+id: string
+		+name: string
+		+login(): bool
+	}
+	class Session {
+		+token: string
+		+expiresAt: Date
+	}
+	User "1" -- "0..*" Session : has
+	
+	
+```
+
+
+# ER diagram
+
+
+```mermaid
+erDiagram
+	USER ||--o{ ORDER : places
+	ORDER ||--|{ ORDER_ITEM : contains
+	PRODUCT ||--o{ ORDER_ITEM : included_in
+	USER {
+		string id PK
+		string email
+	}
+	PRODUCT {
+		string sku PK
+		string name
+		number price
+	}
+```
+
+
+
+# Sequence diagram
+```mermaid 
+sequenceDiagram
+	actor User
+	participant App
+	participant API
+	User->>App: Request
+	App->>API: Fetch data
+	API-->>App: Response
+	App-->>User: Render result
+```
+
+
+
+
+# Flowchart
+
+```mermaid
+flowchart TD
+	Start([Start]) --> A[Step A]
+	A -->|Yes| B[Step B]
+	A -->|No| C[Alternative]
+	B --> D[Finish]
+	C --> D
+```
+
+
 [[prompt]]
 
 ## Windsurf 
